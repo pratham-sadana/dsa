@@ -1,5 +1,5 @@
 #prathamstack2025final
-class Stk:
+class stk:
 
     def __init__(self):
         self.stkk = []
