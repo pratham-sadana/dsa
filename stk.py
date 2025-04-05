@@ -7,25 +7,14 @@ class Stk:
         self.stkk.append(y)
    
     def pop(self):
-        x = self.stkk[-1]
-        del self.stkk[(len(self.stkk)-1)]
-        return x
+        if self.is_empty():
+            return "Stack is empty!"
+        return self.stkk.pop()
    
     def is_empty(self):
-        if len(self.stkk)==0:
-            return True
-        else:
-            return False
+        return len(self.stkk)==0
 
     def top(self):
+        if self.is_empty():
+            return "Stack is empty!"
         return self.stkk[-1]
-
-x = Stk()
-x.push(1)
-x.push(5)
-x.push(8)
-z = x.pop()
-x.push(3)
-print(z)
-print(x.top())
-print(x.stkk)

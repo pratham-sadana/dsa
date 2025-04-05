@@ -1,24 +1,4 @@
-class Stk:
-    def __init__(self):
-        self.stkk = []
-   
-    def push(self, y):
-        self.stkk.append(y)
-   
-    def pop(self):
-        if not self.is_empty(): 
-            return self.stkk.pop()
-        else:
-            return None  
-   
-    def is_empty(self):
-        return len(self.stkk) == 0
-
-    def top(self):
-        if not self.is_empty():  
-            return self.stkk[-1]
-        else:
-            return None  
+from stk import Stk
 
 def infixtopostfix(expr):
     prec = {'^': 4, '*': 3, '/': 3, '+': 2, '-': 2}

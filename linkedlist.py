@@ -1,10 +1,5 @@
-class Node(object):
- 
-    def __init__(self, data, next):
-        self.data = data
-        self.next = next
- 
- 
+from node import Node
+
 class SingleList(object):
  
     head = None
@@ -14,7 +9,7 @@ class SingleList(object):
         print("Showing list data:")
         current_node = self.head
         while current_node is not None:
-            print (current_node.data, " -> ")
+            print (current_node.data, " -> ",end = " ")
             current_node = current_node.next
         print(None)
  
